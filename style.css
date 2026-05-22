@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.week-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.week-controls button,
+#addHabitBtn {
+  padding: 10px 16px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.week-controls button:hover,
+#addHabitBtn:hover {
+  opacity: 0.9;
+}
+
+.add-habit {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+#habitInput {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 50px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.empty-state h2 {
+  margin-bottom: 10px;
+}
+
+.grid-wrapper {
+  overflow-x: auto;
+}
+
+.habit-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.grid-header,
+.habit-row {
+  display: grid;
+  grid-template-columns: 220px repeat(7, 60px) 80px 80px;
+  gap: 10px;
+  align-items: center;
+}
+
+.grid-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.day-header {
+  text-align: center;
+  padding: 10px;
+  border-radius: 12px;
+  background: #e2e8f0;
+}
+
+.today-column {
+  background: #c7d2fe;
+}
+
+.habit-name {
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.streak {
+  color: #f97316;
+  font-size: 0.9rem;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 14px;
+  background: #e2e8f0;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.2s;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+}
+
+.cell.checked {
+  background: #4f46e5;
+  color: white;
+}
+
+.action-btn {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.rename-btn {
+  background: #0ea5e9;
+}
+
+.delete-btn {
+  background: #ef4444;
+}
+
+@media (max-width: 768px) {
+
+  .grid-header,
+  .habit-row {
+    grid-template-columns: 160px repeat(7, 50px) 70px 70px;
+  }
+
+  .cell {
+    width: 50px;
+    height: 50px;
+  }
+
+  .add-habit {
+    flex-direction: column;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

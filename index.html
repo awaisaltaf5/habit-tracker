@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Habit Tracker</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Habit Tracker</h1>
+
+      <div class="week-controls">
+        <button id="prevWeek">← Previous</button>
+        <button id="todayBtn">This Week</button>
+        <button id="nextWeek">Next →</button>
+      </div>
+    </header>
+
+    <div class="add-habit">
+      <input
+        type="text"
+        id="habitInput"
+        placeholder="Add a habit..."
+      />
+
+      <button id="addHabitBtn">
+        Add Habit
+      </button>
+    </div>
+
+    <div id="emptyState" class="empty-state">
+      <h2>No habits yet</h2>
+      <p>
+        Add your first habit and start building streaks 🚀
+      </p>
+    </div>
+
+    <div class="grid-wrapper">
+      <div id="habitGrid" class="habit-grid"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
